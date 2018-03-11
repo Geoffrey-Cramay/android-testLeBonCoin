@@ -2,8 +2,7 @@ package com.example.gcramay.testleboncoin.presentation.view_model
 
 import android.arch.lifecycle.ViewModel
 import android.content.Context
-import android.util.Log
-import com.example.gcramay.testleboncoin.data.RepositoryProvider
+import com.example.gcramay.testleboncoin.data.repository.RepositoryProvider
 import com.example.gcramay.testleboncoin.domain.usecase.PhotoUseCase
 import com.example.gcramay.testleboncoin.presentation.model.PhotoUiItem
 import io.reactivex.Single

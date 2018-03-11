@@ -1,4 +1,4 @@
-package com.example.gcramay.testleboncoin.data
+package com.example.gcramay.testleboncoin.data.repository
 
 import android.content.Context
 import com.example.gcramay.testleboncoin.data.local.PhotoDatabaseProvider
