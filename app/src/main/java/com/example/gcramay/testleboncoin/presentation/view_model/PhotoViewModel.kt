@@ -16,8 +16,7 @@ import io.reactivex.Single
  * @author gcramay
  */
 
-class PhotoViewModel(context: Context) : ViewModel() {
-    private val photoUseCase = PhotoUseCase(RepositoryProvider(context).photoRepository)
+class PhotoViewModel(private val photoUseCase: PhotoUseCase) : ViewModel() {
     private val observable by lazy {
         photoUseCase.getPhotos().cache()
     }
