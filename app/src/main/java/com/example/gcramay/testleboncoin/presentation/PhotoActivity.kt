@@ -10,6 +10,7 @@ import android.view.View
 import com.example.gcramay.testleboncoin.R
 import com.example.gcramay.testleboncoin.presentation.adapter.PhotoAdapter
 import com.example.gcramay.testleboncoin.presentation.adapter.PhotoAdapterItemsDecoration
+import com.example.gcramay.testleboncoin.presentation.model.PhotoUiItem
 import com.example.gcramay.testleboncoin.presentation.view_model.PhotoViewModel
 import com.example.gcramay.testleboncoin.presentation.view_model.PhotoViewModelFactory
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -38,11 +39,19 @@ class PhotoActivity : AppCompatActivity() {
                 .subscribe(
                         { result ->
                             photo_loader.visibility = View.GONE
-                            photo_recycler_view.visibility = View.VISIBLE
-                            photo_recycler_view.addItemDecoration(PhotoAdapterItemsDecoration(resources.getDimensionPixelOffset(R.dimen.photo_list_item_divider)))
-                            photo_recycler_view.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-                            photo_recycler_view.adapter = PhotoAdapter(result)
+                            if (result.isEmpty()) {
+                                no_result_textview.visibility = View.VISIBLE
+                            } else {
+                                initRecyclerView(result)
+                            }
                         })
+    }
+
+    private fun initRecyclerView(result: List<PhotoUiItem>) {
+        photo_recycler_view.visibility = View.VISIBLE
+        photo_recycler_view.addItemDecoration(PhotoAdapterItemsDecoration(resources.getDimensionPixelOffset(R.dimen.photo_list_item_divider)))
+        photo_recycler_view.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        photo_recycler_view.adapter = PhotoAdapter(result)
     }
 
     override fun onPause() {

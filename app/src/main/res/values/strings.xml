@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TestLeBonCoin</string>
+    <string name="no_result">"Sorry, we can't load data"</string>
 </resources>
