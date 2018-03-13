@@ -16,12 +16,7 @@ import io.reactivex.Single
 
 class PhotoUseCase(private val photoRepository: PhotoRepository) {
 
-    fun getPhotos(): Single<List<PhotoUiItem>> {
+    fun getPhotos(): Single<List<Photo>> {
         return photoRepository.getPhotos()
-                .map {
-                    it.map {
-                        PhotoUiItem(it.albumId, it.id, it.title, it.url, it.thumbnailUrl)
-                    }
-                }
     }
 }

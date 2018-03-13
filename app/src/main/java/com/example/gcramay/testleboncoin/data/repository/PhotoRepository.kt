@@ -26,12 +26,19 @@ class PhotoRepository(private val photoLocalService: PhotoLocalService, private 
                 }
             }
         }
-        return photoService.getPhotos()
+
+        return photoRemoteService.getPhotos()
                 .map {
                     savePhotos(it.map { PhotoDataLocal(it.albumId, it.id, it.title, it.url, it.thumbnailUrl) })
                     it.map { Photo(it.albumId, it.id, it.title, it.url, it.thumbnailUrl) }
-                }.onErrorResumeNext({
-            photoListFromDatabase
+                }.onErrorResumeNext(
+                //If there is no network connection we try to get data from dabatase
+                { throwable ->
+            photoListFromDatabase.map { list ->
+                //If there is no data in database, we throw an exception
+                if (list.isEmpty()) throw throwable
+                list
+            }
         })
     }
 

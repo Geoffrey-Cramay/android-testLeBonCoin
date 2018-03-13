@@ -15,9 +15,17 @@ import io.reactivex.Single
  * @author gcramay
  */
 
-class PhotoViewModel(private val photoUseCase: PhotoUseCase) : ViewModel() {
+open class PhotoViewModel(private val photoUseCase: PhotoUseCase) : ViewModel() {
     private val observable by lazy {
-        photoUseCase.getPhotos().cache()
+        convert(photoUseCase.getPhotos())
+                .cache()
+    }
+
+    internal fun convert(single: Single<List<Photo>>) = single.map {
+        it.map {
+            PhotoUiItem(it.albumId, it.id, it.title, it.url, it
+                    .thumbnailUrl)
+        }
     }
 
     fun getPhotos(): Single<List<PhotoUiItem>> {
