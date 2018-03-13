@@ -17,12 +17,12 @@ import kotlinx.android.synthetic.main.photo_list_item.view.*
  * @version 1.0
  * @author gcramay
  */
-class PhotoAdapter(val listItems: List<PhotoUiItem>) : RecyclerView.Adapter<PhotoAdapter.ViewHolder>() {
+class PhotoAdapter(private val listItems: List<PhotoUiItem>) : RecyclerView.Adapter<PhotoAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder = ViewHolder(LayoutInflater.from(parent
             .context).inflate(R.layout.photo_list_item, parent, false))
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) = holder.bind(listItems.get(position))
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) = holder.bind(listItems[position])
 
     override fun getItemCount(): Int = listItems.size
 

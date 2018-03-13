@@ -13,7 +13,7 @@ import retrofit2.converter.gson.GsonConverterFactory
  * @author gcramay
  */
 object PhotoRemoteServiceProvider {
-    const val BASE_URL = "http://jsonplaceholder.typicode.com/"
+    private const val BASE_URL = "http://jsonplaceholder.typicode.com/"
     fun getPhotoService(): PhotoRemoteService {
         val retrofit = Retrofit.Builder()
                 .baseUrl(BASE_URL)

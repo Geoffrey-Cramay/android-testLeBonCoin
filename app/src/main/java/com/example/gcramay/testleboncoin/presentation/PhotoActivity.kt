@@ -4,13 +4,14 @@ import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
-import android.view.View.*
+import android.view.View.GONE
+import android.view.View.VISIBLE
 import com.example.gcramay.testleboncoin.R
 import com.example.gcramay.testleboncoin.presentation.adapter.PhotoAdapter
 import com.example.gcramay.testleboncoin.presentation.adapter.PhotoAdapterItemsDecoration
 import com.example.gcramay.testleboncoin.presentation.model.PhotoUiItem
-import com.example.gcramay.testleboncoin.presentation.view_model.PhotoViewModel
-import com.example.gcramay.testleboncoin.presentation.view_model.PhotoViewModelFactory
+import com.example.gcramay.testleboncoin.presentation.viewmodel.PhotoViewModel
+import com.example.gcramay.testleboncoin.presentation.viewmodel.PhotoViewModelFactory
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
@@ -38,7 +39,7 @@ class PhotoActivity : AppCompatActivity() {
                         { result ->
                             initAndDisplayRecyclerView(result)
                         },
-                        { error ->
+                        { _ ->
                             displayErrorView()
                         })
     }

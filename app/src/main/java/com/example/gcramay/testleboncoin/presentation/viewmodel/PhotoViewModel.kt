@@ -1,4 +1,4 @@
-package com.example.gcramay.testleboncoin.presentation.view_model
+package com.example.gcramay.testleboncoin.presentation.viewmodel
 
 import android.arch.lifecycle.ViewModel
 import com.example.gcramay.testleboncoin.domain.model.Photo

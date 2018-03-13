@@ -1,6 +1,5 @@
 package com.example.gcramay.testleboncoin.data.local
 
-import android.content.Context
 import com.example.gcramay.testleboncoin.data.local.model.PhotoDataLocal
 import io.reactivex.Single
 

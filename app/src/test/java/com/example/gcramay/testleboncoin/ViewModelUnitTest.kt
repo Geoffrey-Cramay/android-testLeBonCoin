@@ -2,7 +2,7 @@ package com.example.gcramay.testleboncoin
 
 import com.example.gcramay.testleboncoin.domain.model.Photo
 import com.example.gcramay.testleboncoin.presentation.model.PhotoUiItem
-import com.example.gcramay.testleboncoin.presentation.view_model.PhotoViewModel
+import com.example.gcramay.testleboncoin.presentation.viewmodel.PhotoViewModel
 import io.reactivex.Single
 import org.junit.Assert
 import org.junit.Test

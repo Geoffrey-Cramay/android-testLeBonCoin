@@ -11,7 +11,7 @@ import android.content.Context
  * @version 1.0
  * @author gcramay
  */
-class PhotoDatabaseProvider(val context: Context) {
+class PhotoDatabaseProvider(private val context: Context) {
     companion object {
         const val DATABASE_NAME = "photo-database"
     }

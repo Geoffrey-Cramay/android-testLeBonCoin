@@ -1,4 +1,4 @@
-package com.example.gcramay.testleboncoin.presentation.view_model
+package com.example.gcramay.testleboncoin.presentation.viewmodel
 
 import android.arch.lifecycle.ViewModel
 import android.arch.lifecycle.ViewModelProvider
@@ -19,6 +19,7 @@ class PhotoViewModelFactory(private val context: Context) : ViewModelProvider.Fa
 
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(PhotoViewModel::class.java)) {
+            @Suppress("UNCHECKED_CAST")
             return PhotoViewModel(PhotoUseCase(RepositoryProvider(context).photoRepository)) as T
         }
         throw IllegalArgumentException("Unknow ViewModel Class");

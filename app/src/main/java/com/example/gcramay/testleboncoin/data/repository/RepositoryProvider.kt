@@ -14,6 +14,6 @@ import com.example.gcramay.testleboncoin.data.remote.PhotoRemoteServiceImpl
  * @author gcramay
  */
 
-class RepositoryProvider(val context: Context) {
+class RepositoryProvider(private val context: Context) {
     val photoRepository by lazy  {PhotoRepository(PhotoLocalServiceImpl(PhotoDatabaseProvider(context).database), PhotoRemoteServiceImpl())}
 }

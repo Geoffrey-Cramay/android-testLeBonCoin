@@ -42,7 +42,7 @@ class PhotoRepository(private val photoLocalService: PhotoLocalService, private 
         })
     }
 
-    fun savePhotos(photoList: List<PhotoDataLocal>) {
+    private fun savePhotos(photoList: List<PhotoDataLocal>) {
         photoLocalService.savePhotos(photoList)
     }
 }
