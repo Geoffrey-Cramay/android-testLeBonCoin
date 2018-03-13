@@ -24,10 +24,14 @@ class PhotoActivity : AppCompatActivity() {
                 .get(PhotoViewModel::class.java)
     }
     private lateinit var disposable: Disposable
+    private val photoAdapter = PhotoAdapter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.photo_activity)
+        photo_recycler_view.addItemDecoration(PhotoAdapterItemsDecoration(resources.getDimensionPixelOffset(R.dimen.photo_list_item_divider)))
+        photo_recycler_view.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        photo_recycler_view.adapter = photoAdapter
     }
 
     override fun onResume() {
@@ -46,14 +50,14 @@ class PhotoActivity : AppCompatActivity() {
 
     private fun initAndDisplayRecyclerView(result: List<PhotoUiItem>) {
         photo_loader.visibility = GONE
+        no_result_textview.visibility = GONE
         photo_recycler_view.visibility = VISIBLE
-        photo_recycler_view.addItemDecoration(PhotoAdapterItemsDecoration(resources.getDimensionPixelOffset(R.dimen.photo_list_item_divider)))
-        photo_recycler_view.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-        photo_recycler_view.adapter = PhotoAdapter(result)
+        photoAdapter.setResult(result)
     }
 
     private fun displayErrorView() {
         photo_loader.visibility = GONE
+        photo_recycler_view.visibility = GONE
         no_result_textview.visibility = VISIBLE
     }
 
