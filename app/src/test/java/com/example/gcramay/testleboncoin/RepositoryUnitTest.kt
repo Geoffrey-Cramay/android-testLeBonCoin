@@ -72,6 +72,7 @@ class RepositoryUnitTest {
         var result: Throwable? = null
         photoRepository.getPhotos().subscribe({}, { result = it })
 
+        verify(photoLocalService, never()).savePhotos(localList)
         Assert.assertNotNull(result)
     }
 }
