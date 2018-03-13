@@ -5,7 +5,7 @@ import android.text.TextUtils
 import com.bumptech.glide.Glide
 
 /**
- * //TODO : Add a class header comments
+ * Extension for ImageView
  *
  * Created on 10/03/2018
  *

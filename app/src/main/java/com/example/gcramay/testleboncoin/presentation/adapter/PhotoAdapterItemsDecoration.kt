@@ -6,7 +6,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.View
 
 /**
- * //TODO : Add a class header comments
+ * Decoration for each items of PhotoAdapter
  *
  * Created on 10/03/2018
  *

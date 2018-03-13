@@ -4,7 +4,7 @@ import com.example.gcramay.testleboncoin.data.remote.model.PhotoDataResponse
 import io.reactivex.Single
 
 /**
- * //TODO : Add a class header comments
+ * Implementation of PhotoRemoteService
  *
  * Created on 07/03/2018
  *
@@ -12,8 +12,8 @@ import io.reactivex.Single
  * @author gcramay
  */
 
-class PhotoServiceImpl(private val photoService: PhotoService = PhotoServiceProvider.getPhotoService()) : PhotoService {
+class PhotoRemoteServiceImpl(private val photoRemoteService: PhotoRemoteService = PhotoRemoteServiceProvider.getPhotoService()) : PhotoRemoteService {
     override fun getPhotos(): Single<List<PhotoDataResponse>> {
-        return photoService.getPhotos()
+        return photoRemoteService.getPhotos()
     }
 }

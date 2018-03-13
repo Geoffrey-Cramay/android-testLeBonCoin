@@ -4,7 +4,7 @@ import android.arch.persistence.room.Entity
 import android.arch.persistence.room.PrimaryKey
 
 /**
- * //TODO : Add a class header comments
+ * Class used to represent a photo in database
  *
  * Created on 06/03/2018
  *

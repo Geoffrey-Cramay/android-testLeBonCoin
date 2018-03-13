@@ -1,7 +1,7 @@
 package com.example.gcramay.testleboncoin.domain.model
 
 /**
- * Model used to represent a photo
+ * Model used to represent a photo in the domain layer
  *
  * Created on 05/03/2018
  *

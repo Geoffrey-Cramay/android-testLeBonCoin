@@ -10,7 +10,7 @@ import com.example.gcramay.testleboncoin.presentation.model.PhotoUiItem
 import kotlinx.android.synthetic.main.photo_list_item.view.*
 
 /**
- * //TODO : Add a class header comments
+ * Adapter responsible for photo display in UI
  *
  * Created on 10/03/2018
  *

@@ -1,11 +1,12 @@
 package com.example.gcramay.testleboncoin.domain.usecase
 
 import com.example.gcramay.testleboncoin.data.repository.PhotoRepository
+import com.example.gcramay.testleboncoin.domain.model.Photo
 import com.example.gcramay.testleboncoin.presentation.model.PhotoUiItem
 import io.reactivex.Single
 
 /**
- * //TODO : Add a class header comments
+ * Use case for Photo
  *
  * Created on 05/03/2018
  *

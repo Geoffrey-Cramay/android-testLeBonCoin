@@ -2,12 +2,12 @@ package com.example.gcramay.testleboncoin.data.repository
 
 import com.example.gcramay.testleboncoin.data.local.PhotoLocalService
 import com.example.gcramay.testleboncoin.data.local.model.PhotoDataLocal
-import com.example.gcramay.testleboncoin.data.remote.PhotoService
+import com.example.gcramay.testleboncoin.data.remote.PhotoRemoteService
 import com.example.gcramay.testleboncoin.domain.model.Photo
 import io.reactivex.Single
 
 /**
- * //TODO : Add a class header comments
+ * Repository of Photo model
  *
  * Created on 05/03/2018
  *
@@ -15,7 +15,7 @@ import io.reactivex.Single
  * @author gcramay
  */
 
-class PhotoRepository(private val photoLocalService: PhotoLocalService, private val photoService: PhotoService) {
+class PhotoRepository(private val photoLocalService: PhotoLocalService, private val photoRemoteService: PhotoRemoteService) {
 
     fun getPhotos(): Single<List<Photo>> {
         val photoListFromDatabase by lazy {

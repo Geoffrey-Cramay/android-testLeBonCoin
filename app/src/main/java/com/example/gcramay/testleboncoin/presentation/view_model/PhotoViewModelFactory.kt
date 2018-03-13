@@ -7,7 +7,7 @@ import com.example.gcramay.testleboncoin.data.repository.RepositoryProvider
 import com.example.gcramay.testleboncoin.domain.usecase.PhotoUseCase
 
 /**
- * //TODO : Add a class header comments
+ * Factory used to create PhotoViewModel
  *
  * Created on 07/03/2018
  *

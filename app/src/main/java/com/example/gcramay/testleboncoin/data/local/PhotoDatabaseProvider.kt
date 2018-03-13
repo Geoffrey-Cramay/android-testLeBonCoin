@@ -4,7 +4,7 @@ import android.arch.persistence.room.Room
 import android.content.Context
 
 /**
- * //TODO : Add a class header comments
+ * Provider of photo database
  *
  * Created on 07/03/2018
  *

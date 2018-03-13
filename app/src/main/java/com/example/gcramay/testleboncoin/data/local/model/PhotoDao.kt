@@ -7,7 +7,7 @@ import android.arch.persistence.room.Query
 import io.reactivex.Single
 
 /**
- * //TODO : Add a class header comments
+ * DAO for PhotoDataLocal
  *
  * Created on 06/03/2018
  *

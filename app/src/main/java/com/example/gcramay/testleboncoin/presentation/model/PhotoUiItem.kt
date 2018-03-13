@@ -1,7 +1,7 @@
 package com.example.gcramay.testleboncoin.presentation.model
 
 /**
- * //TODO : Add a class header comments
+ * Class that represents a Photo for the UI
  *
  * Created on 05/03/2018
  *

@@ -1,14 +1,13 @@
 package com.example.gcramay.testleboncoin.presentation.view_model
 
 import android.arch.lifecycle.ViewModel
-import android.content.Context
-import com.example.gcramay.testleboncoin.data.repository.RepositoryProvider
+import com.example.gcramay.testleboncoin.domain.model.Photo
 import com.example.gcramay.testleboncoin.domain.usecase.PhotoUseCase
 import com.example.gcramay.testleboncoin.presentation.model.PhotoUiItem
 import io.reactivex.Single
 
 /**
- * //TODO : Add a class header comments
+ * ViewModel that generates an observable used to get Photo data for the UI
  *
  * Created on 06/03/2018
  *

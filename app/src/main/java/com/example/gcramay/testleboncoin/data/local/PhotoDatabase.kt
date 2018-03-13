@@ -6,7 +6,7 @@ import com.example.gcramay.testleboncoin.data.local.model.PhotoDataLocal
 import com.example.gcramay.testleboncoin.data.local.model.PhotoDao
 
 /**
- * //TODO : Add a class header comments
+ * Class that represents the photo database
  *
  * Created on 06/03/2018
  *

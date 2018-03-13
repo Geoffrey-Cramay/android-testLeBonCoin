@@ -5,14 +5,14 @@ import io.reactivex.Single
 import retrofit2.http.GET
 
 /**
- * //TODO : Add a class header comments
+ * Interface the the photo remote service
  *
  * Created on 05/03/2018
  *
  * @version 1.0
  * @author gcramay
  */
-interface PhotoService {
+interface PhotoRemoteService {
     @GET("photos")
     fun getPhotos(): Single<List<PhotoDataResponse>>
 }

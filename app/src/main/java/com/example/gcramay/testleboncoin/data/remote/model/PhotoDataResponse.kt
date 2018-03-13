@@ -1,7 +1,7 @@
 package com.example.gcramay.testleboncoin.data.remote.model
 
 /**
- * Model used to represent a photo from API
+ * Class used to represent a photo from API
  *
  * Created on 05/03/2018
  *

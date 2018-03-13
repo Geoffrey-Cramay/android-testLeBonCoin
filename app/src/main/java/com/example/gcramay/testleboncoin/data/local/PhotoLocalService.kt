@@ -4,7 +4,7 @@ import com.example.gcramay.testleboncoin.data.local.model.PhotoDataLocal
 import io.reactivex.Single
 
 /**
- * //TODO : Add a class header comments
+ * Interface for the photo local service
  *
  * Created on 08/03/2018
  *
